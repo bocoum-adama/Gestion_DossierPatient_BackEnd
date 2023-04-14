@@ -60,6 +60,14 @@ public class Authentifiquation {
         Statut = statut;
     }
 
+    public DossierPatient getDossierPatient() {
+        return dossierPatient;
+    }
+
+    public void setDossierPatient(DossierPatient dossierPatient) {
+        this.dossierPatient = dossierPatient;
+    }
+
     @Override
     public String toString() {
         return "Authentifiquation{" +

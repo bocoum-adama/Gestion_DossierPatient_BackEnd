@@ -33,9 +33,8 @@ public class DossierPatient implements Serializable {
     public DossierPatient() {
     }
 
-    public DossierPatient(Date DateDouvertur, Date DateFermeture, String EtatPatient) {
+    public DossierPatient(Date DateDouvertur, String EtatPatient) {
         this.DateDouvertur = DateDouvertur;
-        this.DateFermeture = DateFermeture;
         this.EtatPatient = EtatPatient;
     }
 

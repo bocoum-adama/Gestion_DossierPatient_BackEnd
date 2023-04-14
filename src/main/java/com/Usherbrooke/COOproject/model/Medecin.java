@@ -7,10 +7,7 @@ import java.util.Date;
 
 import jakarta.persistence.*;
 
-/**
- *
- * @author Dell
- */
+
 @Entity
 public class Medecin extends Personne implements Serializable {
 
@@ -25,14 +22,14 @@ public class Medecin extends Personne implements Serializable {
     @OneToMany(mappedBy = "id")
     private Collection<Consultation> consultationCollection;
 
-
-
-    public Medecin(String Mailinstit, String Specialiter, String nom, String prenom, Date dateNaiss, String adresse, String tel) {
-        super(nom, prenom, dateNaiss, adresse, tel);
-        this.Mailinstit = Mailinstit;
-        this.Specialiter = Specialiter;
+    public Medecin() {
     }
 
+    public Medecin(String nom, String prenom, Date dateNaiss, String adresse, String tel, String mailinstit, String specialiter) {
+        super(nom, prenom, dateNaiss, adresse, tel);
+        Mailinstit = mailinstit;
+        Specialiter = specialiter;
+    }
 
     public Long getId() {
         return id;
